@@ -1,16 +1,11 @@
 {
   "name": "huma-dao",
-  "version": "4.2.0",
+  "version": "4.2.1",
+  "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
   "private": false,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wagesoma/sariosrit"
+    "url": "git+https://github.com/wagesoma/sariosrit.git"
   },
   "keywords": [
     "next-js",
@@ -20,7 +15,10 @@
     "web3",
     "typescript"
   ],
-  "author": "sariosrit",
+  "author": {
+    "name": "sariosrit",
+    "tea username": "wagesoma"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wagesoma/sariosrit/issues"
@@ -39,6 +37,33 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "husky": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "jest",
+    "prepare": "husky install",
+    "preinstall": "npx npm-force-resolutions",
+    "postinstall": "npm audit --fix"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$"
+  },
+  "eslintConfig": {
+    "extends": "next"
+  },
+  "resolutions": {
+    "high": {
+      "integrity": "sha512-GkN6vPHId0NKrXXws4q5mryTZFhEEbHApGJbk5vtxK/Tt5szfrXh4+Q0B2rk0mOVaQF7fpdeR1Bv4hIrV9gL+Q==",
+      "dev": true
+    }
   }
 }

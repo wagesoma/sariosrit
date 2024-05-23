@@ -1,1 +1,1 @@
-Huma DAO empowers its members to participate in governance and decision-making processes.
+Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.
