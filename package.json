@@ -1,6 +1,6 @@
 {
   "name": "huma-dao",
-  "version": "4.1.5",
+  "version": "4.2.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -13,9 +13,19 @@
     "url": "https://github.com/wagesoma/sariosrit"
   },
   "keywords": [
-    "next-js"
+    "next-js",
+    "react",
+    "dao",
+    "blockchain",
+    "web3",
+    "typescript"
   ],
   "author": "sariosrit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wagesoma/sariosrit/issues"
+  },
+  "homepage": "https://github.com/wagesoma/sariosrit#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
     "next": "14.1.1",
@@ -30,6 +40,5 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.1",
     "typescript": "^5"
-  },
-  "homepage": "https://github.com/wagesoma/sariosrit"
+  }
 }
