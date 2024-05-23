@@ -7,7 +7,7 @@ Huma-DAO is a blockchain-based project using Next.js and React aimed at building
 - **React**: Front-end library for building dynamic user interfaces.
 - **DAO Integration**: Features to support decentralized organizations with smart contracts.
 - **Web3**: Integration with blockchain technology for secure and transparent transactions.
-- **TypeScript**: A superset of JavaScript that adds optional static types for more robust development.
+- **TypeScript**: A superset of JavaScript that adds optional static types for more robust development
 
 ## Installation
 
