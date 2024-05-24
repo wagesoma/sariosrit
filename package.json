@@ -1,121 +1,123 @@
 {
-    "name": "sariosrit",
-    "version": "4.2.9",
-    "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
-    "private": false,
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/wagesoma/sariosrit.git"
-    },
-    "keywords": [
-      "next-js",
-      "react",
-      "dao",
-      "blockchain",
-      "web3",
-      "typescript"
+  "name": "sariosrit",
+  "version": "4.3.1",
+  "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagesoma/sariosrit.git"
+  },
+  "keywords": [
+    "next-js",
+    "react",
+    "dao",
+    "blockchain",
+    "web3",
+    "typescript"
+  ],
+  "author": "sariosrit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wagesoma/sariosrit/issues"
+  },
+  "homepage": "https://github.com/wagesoma/sariosrit#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "daovoting.js",
+  "files": [
+    "daovoting.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "prepare": "husky install",
+    "preinstall": "npx npm-force-resolutions",
+    "postinstall": "npm audit --fix",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "start-voting": "node scripts/startVoting.js",
+    "end-voting": "node scripts/endVoting.js",
+    "calculate-voting-power": "node scripts/calculateVotingPower.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "@humafara/sariosrit": "^3.1.4",
+    "@reduxjs/toolkit": "^2.2.5",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.12.1",
+    "formik": "^2.2.9",
+    "moontea": "^1.1.4",
+    "next": "14.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
+    "sariosrit": "^4.0.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
+    "cypress": "^13.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.1.1",
+    "husky": "^7.0.4",
+    "jest": "^27.0.6",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.8.3",
+    "typescript": "^5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "prettier"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
     ],
-    "author": "sariosrit",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/wagesoma/sariosrit/issues"
-    },
-    "homepage": "https://github.com/wagesoma/sariosrit#readme",
-    "engines": {
-      "node": ">=14"
-    },
-    "main": "daovoting.js",
-    "files": [
-      "daovoting.js",
-      "README.md",
-      "LICENSE"
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
     ],
-    "scripts": {
-      "dev": "next dev",
-      "build": "next build",
-      "start": "next start",
-      "lint": "eslint .",
-      "lint:fix": "eslint . --fix",
-      "test": "jest",
-      "prepare": "husky install",
-      "preinstall": "npx npm-force-resolutions",
-      "postinstall": "npm audit --fix",
-      "prettier:write": "prettier --write .",
-      "prettier:check": "prettier --check .",
-      "start-voting": "node scripts/startVoting.js",
-      "end-voting": "node scripts/endVoting.js",
-      "calculate-voting-power": "node scripts/calculateVotingPower.js"
-    },
-    "dependencies": {
-      "@humafara/sariosrit": "^3.1.4",
-      "@reduxjs/toolkit": "^2.2.5",
-      "axios": "^1.7.2",
-      "dotenv": "^16.4.5",
-      "ethers": "^6.12.1",
-      "formik": "^2.2.9",
-      "moontea": "^1.1.4",
-      "next": "14.1.1",
-      "react": "^18",
-      "react-dom": "^18",
-      "react-redux": "^9.1.2",
-      "redux": "^5.0.1",
-      "sariosrit": "^4.0.0",
-      "yup": "^0.32.11"
-    },
-    "devDependencies": {
-      "@types/node": "^20",
-      "@types/react": "^18",
-      "@types/react-dom": "^18",
-      "cross-env": "^7.0.3",
-      "eslint": "^8.57.0",
-      "eslint-config-next": "14.1.1",
-      "husky": "^7.0.4",
-      "jest": "^27.0.6",
-      "lint-staged": "^12.3.5",
-      "prettier": "^2.8.3",
-      "typescript": "^5"
-    },
-    "jest": {
-      "testEnvironment": "node",
-      "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$"
-    },
-    "eslintConfig": {
-      "extends": [
-        "next",
-        "prettier"
-      ]
-    },
-    "lint-staged": {
-      "*.js": [
-        "eslint --fix",
-        "prettier --write"
-      ],
-      "*.ts": [
-        "eslint --fix",
-        "prettier --write"
-      ],
-      "*.tsx": [
-        "eslint --fix",
-        "prettier --write"
-      ],
-      "*.json": [
-        "prettier --write"
-      ],
-      "*.md": [
-        "prettier --write"
-      ]
-    },
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged",
-        "pre-push": "npm test"
-      }
-    },
-    "resolutions": {
-      "high": {
-        "integrity": "sha512-GkN6vPHId0NKrXXws4q5mryTZFhEEbHApGJbk5vtxK/Tt5szfrXh4+Q0B2rk0mOVaQF7fpdeR1Bv4hIrV9gL+Q==",
-        "dev": true
-      }
+    "*.tsx": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "resolutions": {
+    "high": {
+      "integrity": "sha512-GkN6vPHId0NKrXXws4q5mryTZFhEEbHApGJbk5vtxK/Tt5szfrXh4+Q0B2rk0mOVaQF7fpdeR1Bv4hIrV9gL+Q==",
+      "dev": true
     }
   }
-  
+}
