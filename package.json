@@ -1,11 +1,11 @@
 {
-    "name": "huma-dao",
-    "version": "4.2.6",
+    "name": "sariosrit",
+    "version": "4.2.8",
     "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
     "private": false,
     "repository": {
         "type": "git",
-        "url": "https://github.com/wagesoma/sariosrit.git"
+        "url": "git+https://github.com/wagesoma/sariosrit.git"
     },
     "keywords": [
         "next-js",
@@ -22,11 +22,13 @@
     },
     "homepage": "https://github.com/wagesoma/sariosrit#readme",
     "dependencies": {
+        "@humafara/sariosrit": "^3.1.4",
         "@reduxjs/toolkit": "^2.2.5",
         "axios": "^1.7.2",
         "dotenv": "^16.4.5",
         "ethers": "^6.12.1",
         "formik": "^2.2.9",
+        "moontea": "^1.1.4",
         "next": "14.1.1",
         "react": "^18",
         "react-dom": "^18",
