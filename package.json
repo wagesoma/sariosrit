@@ -5,7 +5,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wagesoma/sariosrit.git"
+    "url": "https://github.com/wagesoma/sariosrit.git"
   },
   "keywords": [
     "next-js",
@@ -37,15 +37,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
-    "prepare": "husky install",
-    "postinstall": "[ -f package-lock.json ] && npm audit --fix || true",
-    "prettier:write": "prettier --write .",
-    "prettier:check": "prettier --check .",
-    "start-voting": "node scripts/startVoting.js",
-    "end-voting": "node scripts/endVoting.js",
-    "calculate-voting-power": "node scripts/calculateVotingPower.js",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "prepare": "husky install"
+  },
+  "resolutions": {
+    "some-package": "4.3.3"
   },
   "dependencies": {
     "@humafara/sariosrit": "^3.1.4",
@@ -55,7 +50,7 @@
     "ethers": "^6.12.1",
     "formik": "^2.2.9",
     "moontea": "^1.1.4",
-    "next": "14.1.1",
+    "next": "^14.1.1",
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^9.1.2",
@@ -63,8 +58,7 @@
     "sariosrit": "^4.0.0",
     "yup": "^0.32.11",
     "lru-cache": "^6.0.0",
-    "rimraf": "^4.0.0",
-    "glob": "^9.0.0"
+    "rimraf": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
