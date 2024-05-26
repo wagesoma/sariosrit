@@ -1,6 +1,6 @@
 {
   "name": "sariosrit",
-  "version": "4.3.1",
+  "version": "4.3.2",
   "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
   "private": false,
   "repository": {
@@ -38,8 +38,7 @@
     "lint:fix": "eslint . --fix",
     "test": "jest",
     "prepare": "husky install",
-    "preinstall": "npx npm-force-resolutions",
-    "postinstall": "npm audit --fix",
+    "postinstall": "[ -f package-lock.json ] && npm audit --fix || true",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
     "start-voting": "node scripts/startVoting.js",
@@ -62,7 +61,10 @@
     "react-redux": "^9.1.2",
     "redux": "^5.0.1",
     "sariosrit": "^4.0.0",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "lru-cache": "^6.0.0",
+    "rimraf": "^4.0.0",
+    "glob": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -114,10 +116,7 @@
       "pre-push": "npm test"
     }
   },
-  "resolutions": {
-    "high": {
-      "integrity": "sha512-GkN6vPHId0NKrXXws4q5mryTZFhEEbHApGJbk5vtxK/Tt5szfrXh4+Q0B2rk0mOVaQF7fpdeR1Bv4hIrV9gL+Q==",
-      "dev": true
-    }
+  "directories": {
+    "doc": "docs"
   }
 }
