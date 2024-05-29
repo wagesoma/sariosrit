@@ -1,6 +1,6 @@
 {
   "name": "sariosrit",
-  "version": "4.3.7",
+  "version": "4.4.1",
   "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
   "private": false,
   "repository": {
@@ -39,7 +39,9 @@
     "test": "jest",
     "prepare": "husky install",
     "evm-vote": "node scripts/evmVote.js",
-    "bridge-vote": "node scripts/bridgeVote.js"
+    "bridge-vote": "node scripts/bridgeVote.js",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
   },
   "resolutions": {
     "some-package": "4.3.3"
