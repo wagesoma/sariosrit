@@ -1,11 +1,11 @@
 {
   "name": "sariosrit",
-  "version": "4.3.5",
+  "version": "4.3.7",
   "description": "Decentralized Autonomous Organization (DAO) for community voting using Next.js, React, and sariosrit for blockchain interaction.",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wagesoma/sariosrit.git"
+    "url": "https://github.com/wagesoma/sariosrit.git"
   },
   "keywords": [
     "next-js",
@@ -37,33 +37,44 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "evm-vote": "node scripts/evmVote.js",
+    "bridge-vote": "node scripts/bridgeVote.js"
   },
   "resolutions": {
     "some-package": "4.3.3"
   },
   "dependencies": {
+    "@ethersproject/providers": "^5.6.0",
     "@humafara/sariosrit": "^3.1.4",
     "@reduxjs/toolkit": "^2.2.5",
+    "@web3-react/core": "^6.0.9",
+    "@web3-react/fortmatic-connector": "^6.0.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/ledger-connector": "^6.0.9",
+    "@web3-react/portis-connector": "^6.0.9",
+    "@web3-react/torus-connector": "^6.0.9",
+    "@web3-react/walletconnect-connector": "^6.0.9",
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "ethers": "^6.12.1",
     "formik": "^2.2.9",
+    "lru-cache": "^6.0.0",
     "moontea": "^1.1.4",
     "next": "^14.1.1",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-redux": "^9.1.2",
     "redux": "^5.0.1",
+    "rimraf": "^4.0.0",
     "sariosrit": "^4.0.0",
-    "yup": "^0.32.11",
-    "lru-cache": "^6.0.0",
-    "rimraf": "^4.0.0"
+    "web3": "^4.9.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "cross-env": "^7.0.3",
     "cypress": "^13.10.0",
     "eslint": "^8.57.0",
@@ -72,7 +83,7 @@
     "jest": "^27.0.6",
     "lint-staged": "^12.3.5",
     "prettier": "^2.8.3",
-    "typescript": "^5"
+    "typescript": "^5.0.0"
   },
   "jest": {
     "testEnvironment": "node",
